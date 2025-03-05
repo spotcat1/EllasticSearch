@@ -26,6 +26,15 @@ namespace Api.Controllers
 
             return Ok(result) ;
         }
+
+
+        [HttpGet("search")]
+        public async Task<IActionResult> Search(string query)
+        {
+            var results = await _dataService.SearchBySlug(query);
+            return Ok(results);
+        }
+
     }
 
 }
