@@ -24,7 +24,7 @@ namespace Api.Controllers
                 return NotFound("Data not found");
             }
 
-            return Ok(result);
+            return Ok(result) ;
         }
     }
 
